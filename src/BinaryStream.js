@@ -57,7 +57,7 @@ class BinaryStream {
 	 */
 	read(size) {
 		this.offset += size;
-		return this.buffer.slice(this.offset - size, this.offset);
+		return this.buffer.subarray(this.offset - size, this.offset);
 	}
 
 	/**
